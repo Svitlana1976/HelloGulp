@@ -8,8 +8,8 @@ var rename = require('gulp-rename');
 gulp.task('html',function(){
 	gulp.src('dev/**/*.html')
 		.pipe(includer())
-		// .pipe(rename(function(path){
-		// 	path.dirname = ''
-		// }))
+		.pipe(rename(function(path){
+			path.dirname = ''
+		}))
 		.pipe(gulp.dest('build/'))
 });
